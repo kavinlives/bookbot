@@ -16,3 +16,10 @@ def no_of_times_character_appears(text):
             char_count[char] = 1
     return char_count
 
+def sort_char(char_count):
+    def get_count(item):
+        return item[1]
+    
+    char_list = list(char_count.items())
+    char_list.sort(key = get_count, reverse=True)
+    return char_list
